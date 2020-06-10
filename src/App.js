@@ -6,6 +6,10 @@ import { fetchData } from './api/index'
 
 class App extends React.Component {
     
+    async componentDidMount() {
+        const data = await fetchData()
+        console.log(data)
+    }
     render() {
         return (
             <div className = {styles.container}>
